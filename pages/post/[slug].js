@@ -2,9 +2,8 @@ import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/Post.module.css';
 import BlockContent from '@sanity/block-content-to-react';
-import { urlFor} from "../../lib/toolbar";
 import { Toolbar } from '../../components/toolbar';
-import Image from 'next/image'
+
 export const Post = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState('');
 
@@ -22,7 +21,7 @@ export const Post = ({ title, body, image }) => {
       <Toolbar />
       <div className={styles.main}>
         <h1>{title}</h1>
-        {imageUrl && <Image className={styles.mainImage} src={urlFor(imageUrl).url()} alt="post photo" />}
+        {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
 
         <div className={styles.body}>
           <BlockContent blocks={body} />
