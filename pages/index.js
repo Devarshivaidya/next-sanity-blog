@@ -3,7 +3,7 @@ import { Toolbar } from '../components/toolbar';
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import {urlFor } from "../lib/sanity";
+import {urlFor } from "../lib/toolbar";
 import Image from 'next/image'
 export default function Home({ posts }) {
   const router = useRouter();
