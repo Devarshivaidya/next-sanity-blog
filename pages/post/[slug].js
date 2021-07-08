@@ -41,7 +41,7 @@ export const getServerSideProps = async pageContext => {
   }
 
   const query = encodeURIComponent(`*[ _type == "post" && slug.current == "${pageSlug}" ]`);
-  const url = ` https://cdn.sanity.io/images/8jab1rqf/production?query=${query}`;
+  const url = `https://devarshi-next-blog.sanity.studio?query=${query}`;
 
   const result = await fetch(url).then(res => res.json());
   const post = result.result[0];
