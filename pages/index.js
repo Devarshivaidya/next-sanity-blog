@@ -3,6 +3,7 @@ import { Toolbar } from '../components/toolbar';
 import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import {urlFor } from "../lib/sanity";
 import Image from 'next/image'
 export default function Home({ posts }) {
   const router = useRouter();
@@ -13,6 +14,8 @@ export default function Home({ posts }) {
       const imgBuilder = imageUrlBuilder({
         projectId: '8jab1rqf',
         dataset: 'production',
+        apiVersion: "2021-07-08",
+        useCdn: false,
       });
 
       setMappedPosts(
@@ -40,7 +43,7 @@ export default function Home({ posts }) {
           {mappedPosts.length ? mappedPosts.map((p, index) => (
             <div onClick={() => router.push(`/post/${p.slug.current}`)} key={index} className={styles.post}>
               <h3>{p.title}</h3>
-              <Image className={styles.mainImage} src={p.mainImage} alt="post photo" />
+              <Image className={styles.mainImage} src={urlFor(p.mainImage).url()} alt="post photo" />
             </div>
           
           )) : <>No Posts Yet</>}
