@@ -19,8 +19,7 @@ export default function Home({ posts }) {
         posts.map(p => {
           return {
             ...p,
-            // mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
-            mainImage: `https://cdn.sanity.io/images/8jab1rqf/production?query=${query}`
+            mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
           }
         })
       );
