@@ -6,12 +6,6 @@ export const Post = ({ title, body, image }) => {
       projectId: '8jab1rqf',
       dataset: 'production',
     });
-
-
-
-
-    
-
     setImageUrl(imgBuilder.image(image));
   }, [image]);
 
