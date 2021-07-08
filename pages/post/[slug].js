@@ -7,6 +7,11 @@ export const Post = ({ title, body, image }) => {
       dataset: 'production',
     });
 
+
+
+
+    
+
     setImageUrl(imgBuilder.image(image));
   }, [image]);
 
