@@ -21,9 +21,9 @@
     "@sanity/default-login": "^2.11.1",
     "@sanity/desk-tool": "^2.12.2",
     "@sanity/vision": "^2.11.2",
+    "node": "^16.4.0",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0"
-  },
-  "devDependencies": {}
+  }
 }
