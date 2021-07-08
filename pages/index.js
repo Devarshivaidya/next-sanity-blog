@@ -51,7 +51,7 @@ export default function Home({ posts }) {
 
 export const getServerSideProps = async pageContext => {
   const query = encodeURIComponent('*[ _type == "post" ]');
-  const url = `https://cdn.sanity.io/images/8jab1rqf/production?query=${query}`;
+  const url = `https://devarshi-next-blog.sanity.studio/images/8jab1rqf/production?query=${query}`;
   const result = await fetch(url).then(res => res.json());
 
   if (!result.result || !result.result.length) {
