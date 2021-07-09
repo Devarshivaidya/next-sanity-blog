@@ -3,6 +3,20 @@ export const Post = ({ title, body, image }) => {
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       projectId: '8jab1rqf',
       dataset: 'production',
     });
